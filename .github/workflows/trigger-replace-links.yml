@@ -6,6 +6,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
       - name: Find and Replace Template Links
@@ -15,7 +17,4 @@ jobs:
           find: '[{ "find": "ProjectPythia/cookbook-template", "replace": "${{ github.repository_owner }}/${{ github.event.repository.name }}" }, { "find": "475509405", "replace": "${{ github.repository_id}}" }]'
 
       - name: Push changes
-        run: |
-          git add --all
-          git commit -m "Replacing cookbook-template links"
-          git push
+        uses: stefanzweifel/git-auto-commit-action@v4
