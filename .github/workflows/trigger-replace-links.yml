@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - uses: actions/checkout@v3
       - name: Find and Replace Repository Name
@@ -16,6 +17,7 @@ jobs:
           find: "ProjectPythia/cookbook-template"
           replace: "${{ github.repository_owner }}/${{ github.event.repository.name }}"
           regex: false
+          exclude: ".github/workflows/trigger-replace-links.yml"
 
       - name: Find and Replace Repository ID
         uses: jacobtomlinson/gha-find-replace@v3
@@ -23,6 +25,7 @@ jobs:
           find: "475509405"
           replace: "${{ github.repository_id}}"
           regex: false
+          exclude: ".github/workflows/trigger-replace-links.yml"
 
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
