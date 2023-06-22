@@ -2,9 +2,9 @@
 
 # (Replace_with_your_title) Cookbook
 
-[![nightly-build](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml)
-[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
-[![DOI](https://zenodo.org/badge/475509405.svg)](https://zenodo.org/badge/latestdoi/475509405)
+[![nightly-build](https://github.com/$1{{{{ github.repository_owner }}}}/{{{{ github.event.repository.name }}}} $2/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/$1{{{{ github.repository_owner }}}}/{{{{ github.event.repository.name }}}} $2/actions/workflows/nightly-build.yaml)
+[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/$1{{{{ github.repository_owner }}}}/{{{{ github.event.repository.name }}}} $2/main?labpath=notebooks)
+[![DOI](https://zenodo.org/badge/$1{{{{ github.repository_id }}}}$2.svg)](https://zenodo.org/badge/latestdoi/$1{{{{ github.repository_id }}}}$2)
 
 This Project Pythia Cookbook covers ... (replace `...` with the main subject of your cookbook ... e.g., _working with radar data in Python_)
 
@@ -18,8 +18,8 @@ This Project Pythia Cookbook covers ... (replace `...` with the main subject of 
 
 ### Contributors
 
-<a href="https://github.com/ProjectPythia/cookbook-template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ProjectPythia/cookbook-template" />
+<a href="https://github.com/$1{{{{ github.repository_owner }}}}/{{{{ github.event.repository.name }}}} $2/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=$1{{{{ github.repository_owner }}}}/{{{{ github.event.repository.name }}}} $2" />
 </a>
 
 ## Structure
