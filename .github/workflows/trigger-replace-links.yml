@@ -15,8 +15,8 @@ jobs:
         with:
           files: "./*.md"
           find: >
-            '[{ "find": "ProjectPythia/cookbook-template", "replace": "${{ github.repository_owner }}/${{ github.event.repository.name }}" },
-              { "find": "475509405", "replace": "${{ github.repository_id }}" }]'
+            [{ "find": "ProjectPythia/cookbook-template", "replace": "${{ github.repository_owner }}/${{ github.event.repository.name }}" },
+              { "find": "475509405", "replace": "${{ github.repository_id }}" }]
           encoding: utf-8
 
       - name: Push changes
