@@ -1,6 +1,6 @@
 name: trigger-replace-links
 on:
-  workflow-dispatch:
+  workflow_dispatch:
 
   jobs:
     build:
