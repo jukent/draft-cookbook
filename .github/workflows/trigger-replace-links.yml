@@ -21,6 +21,14 @@ jobs:
           find: "475509405"
           replace: ${{ github.repository_id}}
           regex: false
+          
+      - name: Display modified files with repo name
+        run: |
+          echo "Modified files: ${{ steps.find-replace-name.outputs.modifiedFiles }}"
+
+      - name: Display modified files with repo ID
+        run: |
+          echo "Replaced repository ID: ${{ steps.find-replace-id.outputs.modifiedFiles }}"
 
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
