@@ -23,7 +23,7 @@ jobs:
         uses: flcdrg/replace-multiple-action@v1
         with:
           files: "./*.md"
-          find: '[{ "find": "ProjectPythia/cookbook-template", "replace": "${{ github.repository_owner }}/${{ github.event.repository.name }}" }, {"find": 475509405", "replace": "${{ github.repository_id}}"}]'
+          find: '[{ "find": "ProjectPythia/cookbook-template", "replace": "jukent/draft-cookbook" }, { "find": "475509405", "replace": "657326921" }]'
 
       - name: Display Modified Repository ID Files
         run: |
