@@ -11,8 +11,8 @@ jobs:
       - name: Find and Replace Repository Name
         uses: mad9000/actions-find-and-replace-string@3
         with:
-          source: ${{ github.ref }} 
-          find: 'ProjectPythia/cookbook-template'
+          source: ${{ github.ref }}
+          find: ProjectPythia/cookbook-template
           replace: ${{ github.repository_owner }}/${{ github.event.repository.name }}
 
       - name: Display Modified Repository Name files
@@ -20,11 +20,10 @@ jobs:
           echo "Modified files: ${{ steps.find-replace-name.outputs.modifiedFiles }}"
 
       - name: Find and Replace Repository ID
-        uses: jacobtomlinson/gha-find-replace@v3
+      - uses: flcdrg/replace-multiple-action@v1
         with:
-          find: 475509405
-          replace: ${{ github.repository_id}}
-          regex: false
+          files: "./*.md"
+          find: '[{ "find": "ProjectPythia/cookbook-template", "replace": "${{ github.repository_owner }}/${{ github.event.repository.name }}" }, {"find": 475509405", "replace": "${{ github.repository_id}}"}]'
 
       - name: Display Modified Repository ID Files
         run: |
