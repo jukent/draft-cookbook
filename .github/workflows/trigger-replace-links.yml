@@ -16,6 +16,6 @@ jobs:
 
       - name: Push changes
         run: |
-          git add -all
+          git add --all
           git commit -m "Replacing cookbook-template links"
           git push
