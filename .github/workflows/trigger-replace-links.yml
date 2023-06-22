@@ -20,7 +20,7 @@ jobs:
           echo "Modified files: ${{ steps.find-replace-name.outputs.modifiedFiles }}"
 
       - name: Find and Replace Repository ID
-      - uses: flcdrg/replace-multiple-action@v1
+        uses: flcdrg/replace-multiple-action@v1
         with:
           files: "./*.md"
           find: '[{ "find": "ProjectPythia/cookbook-template", "replace": "${{ github.repository_owner }}/${{ github.event.repository.name }}" }, {"find": 475509405", "replace": "${{ github.repository_id}}"}]'
@@ -30,7 +30,9 @@ jobs:
           echo "Replaced repository ID: ${{ steps.find-replace-id.outputs.modifiedFiles }}"
 
       - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+        run: |
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git config --global user.email "username@users.noreply.github.com"
+          git add -a
+          git commit -m "Replacing cookbook-template links"
+          git push
