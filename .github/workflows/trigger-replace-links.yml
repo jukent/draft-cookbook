@@ -13,7 +13,7 @@ jobs:
         with:
           find: ProjectPythia/cookbook-template
           replace: ${{ github.repository_owner }}/${{ github.event.repository.name }}
-          regex: false
+          regex: true
 
       - name: Display Modified Repository Name files
         run: |
