@@ -9,11 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Find and Replace Repository Name
-        uses: jacobtomlinson/gha-find-replace@v3
+        uses: mad9000/actions-find-and-replace-string@3
         with:
-          find: ProjectPythia/cookbook-template
+          source: ${{ github.ref }} 
+          find: 'ProjectPythia/cookbook-template'
           replace: ${{ github.repository_owner }}/${{ github.event.repository.name }}
-          regex: true
 
       - name: Display Modified Repository Name files
         run: |
