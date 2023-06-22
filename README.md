@@ -3,8 +3,8 @@
 # (Replace_with_your_title) Cookbook
 
 [![nightly-build](https://github.com/$1jukent/draft-cookbook$2/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/$1jukent/draft-cookbook$2/actions/workflows/nightly-build.yaml)
-[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/$1jukent/draft-cookbook$2/main?labpath=notebooks)
-[![DOI](https://zenodo.org/badge/$1657326921$2.svg)](https://zenodo.org/badge/latestdoi/$1657326921$2)
+[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/jukent/draft-cookbook/main?labpath=notebooks)
+[![DOI](https://zenodo.org/badge/$1657326921$2.svg)](https://zenodo.org/badge/latestdoi/1657326921)
 
 This Project Pythia Cookbook covers ... (replace `...` with the main subject of your cookbook ... e.g., _working with radar data in Python_)
 
@@ -18,7 +18,7 @@ This Project Pythia Cookbook covers ... (replace `...` with the main subject of 
 
 ### Contributors
 
-<a href="https://github.com/$1jukent/draft-cookbook$2/graphs/contributors">
+<a href="https://github.com/jukent/draft-cookbook/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=$1jukent/draft-cookbook$2" />
 </a>
 
