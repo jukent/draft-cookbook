@@ -11,22 +11,22 @@ jobs:
       - name: Find and Replace Repository Name
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          find: "ProjectPythia/cookbook-template"
+          find: ProjectPythia/cookbook-template
           replace: ${{ github.repository_owner }}/${{ github.event.repository.name }}
           regex: false
+
+      - name: Display Modified Repository Name files
+        run: |
+          echo "Modified files: ${{ steps.find-replace-name.outputs.modifiedFiles }}"
 
       - name: Find and Replace Repository ID
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          find: "475509405"
+          find: 475509405
           replace: ${{ github.repository_id}}
           regex: false
-          
-      - name: Display modified files with repo name
-        run: |
-          echo "Modified files: ${{ steps.find-replace-name.outputs.modifiedFiles }}"
 
-      - name: Display modified files with repo ID
+      - name: Display Modified Repository ID Files
         run: |
           echo "Replaced repository ID: ${{ steps.find-replace-id.outputs.modifiedFiles }}"
 
